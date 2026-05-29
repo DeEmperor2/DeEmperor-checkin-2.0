@@ -1,4 +1,3 @@
-from dotenv import load_dotenv
 import logging
 from telegram import Update
 from telegram.ext import (
@@ -14,6 +13,12 @@ import pytz
 import psycopg2
 from psycopg2.extras import RealDictCursor
 from urllib.parse import urlparse
+
+try:
+    from dotenv import load_dotenv
+except ModuleNotFoundError:
+    def load_dotenv():
+        return False
 
 # Load environment variables
 load_dotenv()
