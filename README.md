@@ -18,3 +18,5 @@ worker: python bot.py
 ```
 
 Do not commit `.env` or real secrets.
+
+Railway should deploy this app with Python 3.12. The repository includes `.python-version` to avoid Python 3.13 compatibility issues with PostgreSQL driver wheels.
